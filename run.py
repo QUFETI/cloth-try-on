@@ -1,5 +1,6 @@
 from PIL import Image
 import os
+import cv2
 
 
 # running the preprocessing
