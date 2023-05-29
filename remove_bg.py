@@ -2,6 +2,7 @@ import requests
 import os
 from PIL import Image
 import numpy as np
+import cv2
 
 
 class preprcessInput:
@@ -71,3 +72,6 @@ for images in os.listdir('/content/inputs/test/image'):
     print('yo')
     op = preprocess.remove_bg(r'/content/inputs/test/image/'+images)
     arr = preprocess.transform(768, 1024)
+    cv2.imshow("Output", arr)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
